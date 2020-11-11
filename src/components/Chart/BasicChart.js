@@ -39,7 +39,17 @@ function BasicChart() {
     setLabels((state) => [...state, newLabel]);
     setDatasetsData((state) => [...state, sum]);
   }, [datasetsData, labelNum]);
-  const removeDataFunc = useCallback(() => {}, []);
+  const removeDataFunc = useCallback(() => {
+    if (labels.length - 1 > 0) {
+      const lengthMinusOne = labels.length - 1; // labels, datasetsData에서 마지막 값을 제거
+      setLabels((state) => state.slice(0, lengthMinusOne));
+      setDatasetsData((state) => state.slice(0, lengthMinusOne));
+      setLabelNum((state) => state - 1);
+      return null;
+    }
+    window.alert('불가능한 입력입니다.');
+    return null;
+  }, [labels.length]);
   return (
     <>
       <Bar data={dataOptions} options={options} />
