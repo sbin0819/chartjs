@@ -16,7 +16,7 @@ function Header() {
     <HeaderContainer>
       <Link to='/'>Home</Link>
       <Link to='/chart'>Chart</Link>
-      <Link>About</Link>
+      <Link to='/about'>About</Link>
     </HeaderContainer>
   );
 }

@@ -13,7 +13,6 @@ function Chart() {
       <h1>차트 예시</h1>
       <Container>
         <BasicChart />
-        <BasicChart />
       </Container>
     </>
   );
