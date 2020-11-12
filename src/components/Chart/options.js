@@ -37,6 +37,8 @@ export const chartStyles = {
 
 // 차트 기타 옵션
 export const options = {
+  responsive: true /* 반응형 size를 위한 옵션 */,
+  maintainAspectRatio: true /* 반응형 size를 위한 옵션 */,
   title: {
     display: true,
     text: '누적 유저 차트 예시',

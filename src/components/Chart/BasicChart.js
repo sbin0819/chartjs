@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { Button } from 'antd';
 import { chartStyles, options } from './options';
-import { randomNumberFunc, randomNumberArrayFunc } from '../../lib/fakeData';
+import { randomNumberFunc } from '../../lib/fakeData';
 
 /* 선택으로 가져올 정보들 
   1. 1d, 1w, 1m, 1y
@@ -39,6 +39,7 @@ function BasicChart() {
     setLabels((state) => [...state, newLabel]);
     setDatasetsData((state) => [...state, sum]);
   }, [datasetsData, labelNum]);
+
   const removeDataFunc = useCallback(() => {
     if (labels.length - 1 > 0) {
       const lengthMinusOne = labels.length - 1; // labels, datasetsData에서 마지막 값을 제거
@@ -52,7 +53,9 @@ function BasicChart() {
   }, [labels.length]);
   return (
     <>
-      <Bar data={dataOptions} options={options} />
+      <div style={{ width: '800px' }}>
+        <Bar data={dataOptions} options={options} />
+      </div>
       <div>
         <Button size='large' onClick={addDataFunc}>
           누적 데이터 추가
