@@ -1,12 +1,8 @@
 import React from 'react';
-import Chart from '../components/Chart';
+import BasicChartContainer from '../containers/Chart/BasicChartContainer';
 
 function ChartPage() {
-  return (
-    <div>
-      <Chart />
-    </div>
-  );
+  return <BasicChartContainer />;
 }
 
 export default ChartPage;
