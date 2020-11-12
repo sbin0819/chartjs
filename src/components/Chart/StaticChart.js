@@ -1,8 +1,13 @@
 import React from 'react';
-import { Bar } from 'react-chartjs-2';
+import { Bar, Pie } from 'react-chartjs-2';
 
 function StaticChart() {
-  return <Bar data={data} options={options} />;
+  return (
+    <div>
+      <Bar data={data} options={options} />
+      <Pie data={data} options={options} />
+    </div>
+  );
 }
 
 export default StaticChart;
@@ -61,6 +66,8 @@ const data = {
 
 /* 차트 관련 세부 옵션 지금은 크게 유의미한 설정이 아님 */
 const options = {
+  responsive: true /* 반응형 size를 위한 옵션 */,
+  maintainAspectRatio: true /* 반응형 size를 위한 옵션 */,
   title: {
     display: true,
     text: '유저 차트 예시',

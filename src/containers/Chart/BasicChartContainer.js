@@ -13,6 +13,7 @@ export default function BasicChartContainer() {
   const [labels, setLabels] = useState(['acc#1', 'acc#2', 'acc#3']);
   const [datasetsData, setDatasetsData] = useState([10, 22, 33]);
   const [labelNum, setLabelNum] = useState(4);
+  const [isBar, setIsBar] = useState(true);
 
   const dataOptions = {
     labels: labels /* 라벨 이름 */,
@@ -47,12 +48,16 @@ export default function BasicChartContainer() {
     return null;
   }, [labels.length]);
 
+  const onChangeChart = useCallback(() => setIsBar((state) => !state), []);
+
   return (
     <BasicChart
+      isBar={isBar}
       dataOptions={dataOptions}
       options={options}
       addDataFunc={addDataFunc}
       removeDataFunc={removeDataFunc}
+      onChangeChart={onChangeChart}
     />
   );
 }

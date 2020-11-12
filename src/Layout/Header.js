@@ -4,12 +4,14 @@ import styled from 'styled-components';
 
 const HeaderContainer = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
   height: 50px;
-  padding-right: 60%;
+  padding-right: 40%;
   background: gold;
   font-size: 2rem;
+  a {
+    margin-left: 35px;
+  }
 `;
 function Header() {
   return (
