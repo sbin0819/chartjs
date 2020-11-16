@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const ButtonContainer = styled.div`
   margin-top: 20px;
   button {
-    margin-right: 10px;
+    margin-right: 1px;
   }
 `;
 
@@ -20,7 +20,12 @@ function BasicChart({
 }) {
   return (
     <>
-      <div style={{ width: '800px' }}>
+      <div style={{ maxWidth: '1000px' }}>
+        <ButtonContainer style={{ float: 'right' }}>
+          <Button size='large'>유저 데이터</Button>
+          <Button size='large'>프로젝트 데이터</Button>
+          <Button size='large'>테스크 데이터</Button>
+        </ButtonContainer>
         {isBar ? (
           <Bar data={dataOptions} options={options} />
         ) : (

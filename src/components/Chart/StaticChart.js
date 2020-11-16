@@ -25,7 +25,7 @@ const data = {
   ] /* 라벨 이름 */,
   datasets: [
     {
-      label: '서비스 유저 수',
+      label: '예시 넘버',
       data: [65, 59, 80, 81, 56, 55, 40] /* 라벨에 데이터가 들어가는 부분 */,
       /* 아래 스타일 옵션 시작 */
       fill: false,
@@ -70,7 +70,7 @@ const options = {
   maintainAspectRatio: true /* 반응형 size를 위한 옵션 */,
   title: {
     display: true,
-    text: '유저 차트 예시',
+    text: '차트 예시',
     fontSize: 20,
   } /* chart 타이틀 옵션 */,
   legend: {
